@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:lts
+LABEL maintainer="herve.leclerc@alterway.fr"
 ENV DOCKERVERSION=18.03.0-ce
 USER root
 RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
