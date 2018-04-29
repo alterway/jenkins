@@ -8,4 +8,4 @@ RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker
     && tar xzvf docker.tgz \
     && mv docker/docker /usr/local/bin \
     && rm -rf docker docker.tgz \
-    && curl -L https://github.com/docker/compose/releases/download/${COMPOSEVERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    && curl -fsSL https://github.com/docker/compose/releases/download/${COMPOSEVERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
