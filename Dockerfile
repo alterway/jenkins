@@ -2,7 +2,7 @@ FROM jenkins/jenkins:lts
 LABEL maintainer="herve.leclerc@alterway.fr"
 ENV DOCKERVERSION=18.03.0-ce
 ENV COMPOSEVERSION=1.21.0
-# needed to install software
+# needed to install software demo
 USER root
 RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
     && mv docker-${DOCKERVERSION}.tgz docker.tgz \
