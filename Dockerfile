@@ -12,7 +12,7 @@ RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker
     && curl -fsSL https://github.com/docker/compose/releases/download/${COMPOSEVERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose \
     && chmod a+rx /usr/local/bin/docker-compose
 
-# aws-cli
+# aws-cli :(
 RUN apt-get install -y python3 python-pip python-dev build-essential \
     && python -V \
     && pip install awscli --upgrade --user \
