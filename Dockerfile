@@ -12,7 +12,7 @@ RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker
     && chmod a+rx /usr/local/bin/docker-compose
 
 # aws-cli
-RUN apt-get install -y python3 python-pip python-dev build-essential \
+RUN apt-get update && apt-get install -y python3 python-pip python-dev build-essential \
     && python -V \
     && pip install awscli --upgrade --user \
     && echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc \
