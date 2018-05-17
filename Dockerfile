@@ -10,10 +10,4 @@ RUN    curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker
     && rm -rf docker docker.tgz \
     && curl -fsSL https://github.com/docker/compose/releases/download/${COMPOSEVERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose \
     && chmod a+rx /usr/local/bin/docker-compose
-
-# aws-cli
-RUN apt-get update && apt-get install -y python3 python-pip python-dev build-essential \
-    && python -V \
-    && pip install awscli --upgrade --user \
-    && echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc \
-    && source ~/.bashrc
+    
