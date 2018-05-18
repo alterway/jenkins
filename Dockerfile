@@ -13,5 +13,6 @@ RUN apt-get update \
     && mv docker/docker /usr/local/bin \
     && rm -rf docker docker.tgz \
     && curl -fsSL https://github.com/docker/compose/releases/download/${COMPOSEVERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose \
-    && chmod a+rx /usr/local/bin/docker-compose
+    && chmod a+rx /usr/local/bin/docker-compose \
+    && rm -rf /var/lib/apt/lists/*
     
